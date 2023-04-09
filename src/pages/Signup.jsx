@@ -2,6 +2,7 @@ import React from 'react'
 import { FcGoogle } from 'react-icons/fc'
 import { FaApple } from 'react-icons/fa'
 import '../styles/signup.css'
+import { Link } from 'react-router-dom'
 
 // grid grid-cols-5 grid-rows-1
 const Signup = () => {
@@ -54,9 +55,12 @@ const Signup = () => {
           <a href='#' className='text-blue-600 text-left self-start px-6 py-4'>
             Forgot Password?
           </a>
-          <button className='text-base font-semibold text-white bg-black w-[90%] py-2 rounded-lg'>
+          <Link
+            to={'/dashboard'}
+            className='text-base font-semibold text-white bg-black w-[90%] py-2 rounded-lg'
+          >
             Sign in
-          </button>
+          </Link>
         </form>
         <p className='text-base py-4'>
           Don't have an account?{' '}
