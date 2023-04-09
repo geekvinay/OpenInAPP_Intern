@@ -10,12 +10,12 @@ import Dashboard from './pages/Dashboard'
 
 const router = createBrowserRouter([
   {
-    path: '/signup',
-    element: <Signup />
-  },
-  {
     path: '/dashboard',
     element: <Dashboard />
+  },
+  {
+    path: '/',
+    element: <Signup />
   }
 ])
 
