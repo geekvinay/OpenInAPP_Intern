@@ -7,6 +7,8 @@ import {
   FaUsers
 } from 'react-icons/fa'
 import img from '../assets/2606517_5856.jpg'
+import SummaryPie from './SummaryPie'
+import ChartContainer from './LineChart'
 
 const RightSec = () => {
   return (
@@ -70,28 +72,10 @@ const RightSec = () => {
             <FaUsers className='self-start text-3xl opacity-80' />
           </span>
         </div>
-
-        {/* #
-        #
-        #
-        #
-        ####### Charts Section
-        #
-        #
-        #
-        */}
-        <div className='histogram bg-white h-full w-full row-span-2'></div>
-
-        {/* #
-        #
-        #
-        #
-        ####### Summary Section
-        #
-        #
-        #
-        */}
-        <div className='seummar bg-red-500 h-full w-full row-span-2'></div>
+        <div className='histogram bg-white h-full w-full row-span-2 rounded-2xl'>
+          <ChartContainer />
+        </div>
+        <SummaryPie />
       </article>
     </section>
   )
