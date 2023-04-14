@@ -1,5 +1,9 @@
 import React from 'react'
 import { Pie } from 'react-chartjs-2'
+import inData from '../../root.json'
+
+const storeData = JSON.stringify(inData)
+localStorage.setItem('data', storeData)
 
 const inpData = JSON.parse(localStorage.getItem('data')).pieChart
 console.log(inpData)
