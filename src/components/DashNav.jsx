@@ -7,10 +7,11 @@ import {
 } from 'react-icons/fa'
 
 import { FiPieChart } from 'react-icons/fi'
+import '../styles/dashboard.css'
 
 const DashNav = () => {
   return (
-    <section className='box-border bg-black h-full w-full rounded-[1.8rem] px-4 flex flex-col justify-between'>
+    <section className='dash--nav box-border bg-black h-full w-full rounded-[1.8rem] px-4 flex flex-col justify-between'>
       <a
         href='/'
         className='text-5xl font-bold text-white text-left py-[3rem] px-8'

@@ -54,7 +54,7 @@ const MyChart = ({ data }) => {
   }, [data])
 
   return (
-    <div className='w-full h-full overflow-hidden box-border'>
+    <div className='w-full h-full px-8 py-4 overflow-hidden box-border'>
       <canvas ref={chartRef} className='h-[100%] w-[100%]' />
     </div>
   )

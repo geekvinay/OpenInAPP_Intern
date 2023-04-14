@@ -42,7 +42,7 @@ const RightSec = () => {
               </span>
               <h1 className='text-3xl font-semibold m-0'>$22,000</h1>
             </div>
-            <FaMoneyCheck className='self-start text-3xl opacity-80' />
+            <FaMoneyCheck className='icon self-start text-3xl opacity-80' />
           </span>
           <span className='transaction bg-[#F4ECDD] rounded-2xl flex justify-between w-full h-full px-8 py-4'>
             <div className='wrapper mt-auto flex-col'>
@@ -51,7 +51,7 @@ const RightSec = () => {
               </span>
               <h1 className='text-3xl font-semibold m-0'>22,000</h1>
             </div>
-            <FaTags className='self-start text-3xl opacity-80' />
+            <FaTags className='icon self-start text-3xl opacity-80' />
           </span>
           <span className='likes bg-[#EFDADA] rounded-2xl flex justify-between w-full h-full px-8 py-4'>
             <div className='wrapper mt-auto flex-col'>
@@ -60,7 +60,7 @@ const RightSec = () => {
               </span>
               <h1 className='text-3xl font-semibold m-0'>22,000</h1>
             </div>
-            <FaThumbsUp className='self-start text-3xl opacity-80' />
+            <FaThumbsUp className='icon self-start text-3xl opacity-80' />
           </span>
           <span className='users bg-[#DEE0EF] rounded-2xl flex justify-between w-full h-full px-8 py-4'>
             <div className='wrapper mt-auto flex-col'>
@@ -69,7 +69,7 @@ const RightSec = () => {
               </span>
               <h1 className='text-3xl font-semibold m-0'>22,000</h1>
             </div>
-            <FaUsers className='self-start text-3xl opacity-80' />
+            <FaUsers className='icon self-start text-3xl opacity-80' />
           </span>
         </div>
         <div className='histogram bg-white h-full w-full row-span-2 rounded-2xl'>

@@ -6,7 +6,7 @@ const SummaryPie = () => {
   return (
     <div className='summarys h-full w-full row-span-2 grid grid-rows-1 grid-cols-2 gap-8'>
       <div className='pie--chart bg-white rounded-2xl grid grid-rows-1 grid-cols-2'>
-        <div className='piechart flex-col'>
+        <div className='piechart flex-col px-4 py-4'>
           <h1 className='text-2xl text-left px-8 py-4 font-semibold'>
             Top products
           </h1>
