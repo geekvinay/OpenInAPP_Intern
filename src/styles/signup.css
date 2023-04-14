@@ -28,7 +28,7 @@ div.signup-wrapper{
     @apply my-2 mx-0 flex items-center;
   }
 
-  div. form{
+  div.form{
     @apply min-w-[80%];
   }
 }
