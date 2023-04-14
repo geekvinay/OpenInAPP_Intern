@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Chart from 'chart.js/auto'
 
 const MyChart = ({ data }) => {
   const chartRef = useRef(null)
   const chartInstanceRef = useRef(null)
+  const initialData = JSON.parse(localStorage.getItem('data')).lineGraph
+  console.log(initialData)
 
   useEffect(() => {
     if (chartInstanceRef.current) {
@@ -14,23 +16,10 @@ const MyChart = ({ data }) => {
     chartInstanceRef.current = new Chart(myChartRef, {
       type: 'line',
       data: {
-        labels: [
-          'Week 1',
-          'Week 2',
-          'Week 3',
-          'Week 4',
-          'Week 5',
-          'Week 6',
-          'Week 7',
-          'Week 8',
-          'Week 9',
-          'Week 10',
-          'Week 11',
-          'Week 12'
-        ],
+        labels: initialData.labels,
         datasets: [
           {
-            data: [5, 22, 13, 34, 15, 9, 12, 3, 12, 13, 12, 12],
+            data: initialData.data,
             fill: true,
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1

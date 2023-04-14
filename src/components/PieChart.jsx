@@ -1,13 +1,16 @@
 import React from 'react'
 import { Pie } from 'react-chartjs-2'
 
+const inpData = JSON.parse(localStorage.getItem('data')).pieChart
+console.log(inpData)
+
 const data = {
-  labels: ['Red', 'Blue', 'Yellow'],
+  labels: inpData.labels,
   datasets: [
     {
-      data: [300, 50, 100],
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      data: inpData.data,
+      backgroundColor: inpData.backgroundColor,
+      hoverBackgroundColor: inpData.hoverBackgroundColor,
       borderWidth: 0
     }
   ]
@@ -17,7 +20,7 @@ const options = {
   plugins: {
     legend: {
       position: 'right',
-      display: false,
+      // display: false,
       label: {
         font: {
           size: 20,
@@ -37,7 +40,7 @@ const options = {
 
 const PieChart = () => {
   return (
-    <div className='h-[60%] mx-auto w-fit'>
+    <div className='h-[100%] w-fit'>
       <Pie data={data} options={options} />
     </div>
   )

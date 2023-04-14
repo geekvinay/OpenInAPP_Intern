@@ -3,6 +3,13 @@ import { FcGoogle } from 'react-icons/fc'
 import { FaApple } from 'react-icons/fa'
 import '../styles/signup.css'
 import { Link } from 'react-router-dom'
+import '../firebase'
+import {
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  getAuth
+} from 'firebase/auth'
 
 // grid grid-cols-5 grid-rows-1
 const Signup = () => {
@@ -20,11 +27,20 @@ const Signup = () => {
           <div className='oauth--wrapper flex pt-4 w-[100%]'>
             <span className='google flex items-center bg-white px-4 mr-2 rounded-lg cursor-pointer'>
               <FcGoogle className='h-[200%]' />
-              <span className='px-4 py-2 text-sm'>Sign in with google</span>
+              <span
+                className='px-4 py-2 text-sm'
+                onClick={() => {
+                  const auth = getAuth()
+                  const provider = new GoogleAuthProvider()
+                  signInWithPopup(auth, provider)
+                }}
+              >
+                Sign in with google
+              </span>
             </span>
             <span className='apple flex items-center bg-white px-4 rounded-lg cursor-pointer'>
               <FaApple className='h-[200%]' />
-              <span className='px-4 py-2 text-sm'>Sign in with google</span>
+              <span className='px-4 py-2 text-sm'>Sign in with Apple</span>
             </span>
           </div>
         </section>
